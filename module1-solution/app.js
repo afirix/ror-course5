@@ -25,7 +25,7 @@
       var items = menu.split(',');
       var nonEmptyItemsCount = 0;
       for (var i = 0; i < items.length; i++) {
-        if (!isStringEmpty(items[i])) {
+        if (!isStringEmpty(items[i].trim())) {
           nonEmptyItemsCount++;
         }
       }
