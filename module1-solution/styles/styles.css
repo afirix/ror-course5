@@ -1,0 +1,17 @@
+.menu-message {
+  padding: 5px;
+}
+
+.menu-success {
+  color: #009900;
+  border: 1px solid #009900;
+}
+
+.menu-failure {
+  color: #cc0000;
+  border: 1px solid #cc0000;
+}
+
+.comment {
+  font-size: 0.8em;
+}
