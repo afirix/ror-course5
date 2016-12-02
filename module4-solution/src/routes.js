@@ -23,7 +23,7 @@
         }]
       }
     })
-    .state('items', {
+    .state('categories.items', {
       url: '/items/{categoryShortName}',
       templateUrl: 'src/menuapp/templates/items.template.html',
       controller: 'ItemsController as itemsCtrl',
@@ -33,18 +33,5 @@
         }]
       }
     });
-    // .state('items', {
-    //   url: '/items/{categoryShortName}',
-    //   templateUrl: 'src/menuapp/templates/items.template.html',
-    //   controller: 'ItemsController as itemsCtrl',
-    //   resolve: {
-    //     items: ['MenuDataService', '$stateParams', function (MenuDataService, $stateParams) {
-    //       // console.log("inside resolve");
-    //       // console.log($stateParams.categoryShortName);
-    //       // console.log(MenuDataService.getItemsForCategory($stateParams.categoryShortName));
-    //       return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
-    //     }]
-    //   }
-    // });
   };
 })();
