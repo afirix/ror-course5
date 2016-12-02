@@ -1,2 +1,8 @@
-<menu-categories-list categories="categoriesCtrl.categories"></menu-categories-list>
-<ui-view></ui-view>
+<div class="back">
+  <a ui-sref="home">Back</a>
+</div>
+<div>
+  <h3 class="title">Menu Categories</h3>
+  <menu-categories-list categories="categoriesCtrl.categories" class="float-left"></menu-categories-list>
+  <ui-view class="float-left"></ui-view>
+</div>

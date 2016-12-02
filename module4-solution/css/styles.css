@@ -1,0 +1,32 @@
+.float-left {
+  float:left;
+  margin-right: 50px;
+}
+
+body {
+  padding: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.back {
+  margin-bottom: 20px;
+}
+
+menu-categories-list > ul {
+  list-style-type: disc;
+}
+
+menu-items-list > ul {
+  list-style-type: circle;
+}
+
+a {
+  font-size: 1.2em;
+}
