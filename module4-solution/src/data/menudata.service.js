@@ -2,8 +2,7 @@
   'use strict';
 
   angular.module('data')
-    .service('MenuDataService', MenuDataService)
-    .constant('apiBasePath', 'https://davids-restaurant.herokuapp.com');
+    .service('MenuDataService', MenuDataService);
 
   MenuDataService.$inject = ['$http', 'apiBasePath'];
   function MenuDataService($http, apiBasePath) {

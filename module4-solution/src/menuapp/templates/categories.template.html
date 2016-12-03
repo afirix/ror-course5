@@ -3,6 +3,10 @@
 </div>
 <div>
   <h3 class="title">Menu Categories</h3>
-  <menu-categories-list categories="categoriesCtrl.categories" class="float-left"></menu-categories-list>
-  <ui-view class="float-left"></ui-view>
+  <div class="float-left">
+    <menu-categories-list categories="categoriesCtrl.categories"></menu-categories-list>
+  </div>
+  <div class="detail-view">
+    <ui-view></ui-view>
+  </div>
 </div>
