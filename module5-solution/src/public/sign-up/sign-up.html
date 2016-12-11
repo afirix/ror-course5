@@ -1,0 +1,67 @@
+<div class="container">
+  <fieldset id="signUp">
+    <legend>Registration</legend>
+    <form name="signUpForm" ng-submit="signUpCtrl.submit()" novalidate>
+      <input type="text" name="firstName" placeholder="First Name"
+             ng-model="signUpCtrl.user.firstName"
+             required
+             minlength="2">
+      <span ng-if="(signUpForm.firstName.$error.minlength || signUpForm.firstName.$error.required)
+                      && signUpForm.firstName.$touched">
+        First name must be at least 2 characters long
+      </span>
+      <br>
+
+      <input type="text" name="lastName" placeholder="Last Name"
+             ng-model="signUpCtrl.user.lastName"
+             required
+             minlength="2">
+      <span ng-if="(signUpForm.lastName.$error.minlength || signUpForm.lastName.$error.required)
+                      && signUpForm.lastName.$touched">
+        Last name must be at least 2 characters long
+      </span>
+      <br>
+
+      <input type="email" name="email" placeholder="Email"
+             ng-model="signUpCtrl.user.email"
+             required
+             pattern="(.+)@(.+)\.(.+)">
+      <span ng-if="signUpForm.email.$error.required && signUpForm.email.$touched">
+        Email is required
+      </span>
+      <span ng-if="(signUpForm.email.$error.pattern || signUpForm.email.$error.email)
+                      && signUpForm.email.$touched">
+        Email must be in the format user@domain
+      </span>
+      <br>
+
+      <input type="tel" name="phoneNumber" placeholder="Phone Number"
+             ng-model="signUpCtrl.user.phoneNumber"
+             required
+             pattern="(\d{3})-(\d{3})-(\d{4})">
+      <span ng-if="signUpForm.phoneNumber.$error.required && signUpForm.phoneNumber.$touched">
+        Phone number is required
+      </span>
+      <span ng-if="signUpForm.phoneNumber.$error.pattern && signUpForm.phoneNumber.$touched">
+        Phone must be in the format ###-###-####
+      </span>
+      <br>
+
+      <input type="text" name="menuNumber" placeholder="Favorite Dish Number"
+             ng-model="signUpCtrl.user.menuNumber"
+             ng-model-options="{ updateOn: 'blur' }"
+             valid-menu-item>
+      <span ng-if="signUpForm.menuNumber.$invalid &&
+                    signUpForm.menuNumber.$touched">
+        No such menu number exists
+      </span>
+      <br>
+
+      <input type="submit" value="Submit"
+        ng-disabled="!signUpForm.$valid"><br>
+
+      <span ng-if="signUpForm.$submitted">Your information has been saved</span>
+
+    </form>
+  </fieldset>
+</div>

@@ -1,0 +1,26 @@
+<table class="table table-bordered">
+  <tr>
+    <td class="col-xs-3">First Name</td>
+    <td class="col-xs-9">{{ $ctrl.user.firstName }}</td>
+  </tr>
+  <tr>
+    <td>Last Name</td>
+    <td>{{ $ctrl.user.lastName }}</td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>{{ $ctrl.user.email }}</td>
+  </tr>
+  <tr>
+    <td>Phone Number</td>
+    <td>{{ $ctrl.user.phoneNumber }}</td>
+  </tr>
+  <tr>
+    <td>Favorite Dish</td>
+    <td>
+      <menu-item
+          ng-if="$ctrl.favoriteDish"
+          menu-item="$ctrl.favoriteDish"></menu-item>
+    </td>
+  </tr>
+</table>

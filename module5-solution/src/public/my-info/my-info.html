@@ -1,0 +1,12 @@
+<div class="container">
+  <span ng-if="myInfoCtrl.user === undefined">
+    Not signed up yet. <a ui-sref="public.signup">Sign up now!</a>
+  </span>
+
+  <div ng-if="myInfoCtrl.user !== undefined">
+    <info-table
+      user="myInfoCtrl.user"
+      favorite-dish="myInfoCtrl.favoriteDish">
+    </info-table>
+  </div>
+</div>
